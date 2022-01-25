@@ -1,6 +1,6 @@
 function setupFloatButton() {
 
-	const floatButton = document.getElementById('float-btn');
+	const cartFloatButton = document.getElementById('cart-floatBtn');
 	const closeCartButton = document.getElementById('cart-btnMobile-closeCart');
 
 	const cart = document.getElementById('cart');
@@ -11,11 +11,11 @@ function setupFloatButton() {
 	const cartPurchaseInfo = document.getElementById('cart-purchaseInfo');
 
 	//Opening the cart
-	floatButton.addEventListener('click', function () {
+	cartFloatButton.addEventListener('click', function () {
 
-		const cartWithItemsIsEmpty = cartWithItems.children;
+		const cartWithItemsCollection = cartWithItems.children;
 
-		if (!cartWithItemsIsEmpty.length) {
+		if (!cartWithItemsCollection.length) {
 			cartPurchaseInfo.classList.add('closed');
 			cartWithoutItems.classList.remove('closed');
 		} else {
@@ -38,13 +38,15 @@ function setupFloatButton() {
 function setupMenuSelection() {
 	//Muda fundo da categoria selecionada
 	const menuLinks = document.getElementsByClassName('menu-link');
+
 	let selectedLink = menuLinks[0];
+
 	for (const link of menuLinks) {
 		link.addEventListener('click', function () {
 			selectedLink.classList.remove('selected');
 			link.classList.add('selected');
 			selectedLink = link;
-		})
+		});
 	}
 }
 
