@@ -13,29 +13,6 @@ function setupFloatCartButton() {
 	const cartWithoutItems = document.getElementById('cart-withoutItems');
 	const cartPurchaseInfo = document.getElementById('cart-purchaseInfo');
 
-	//Opening the cart
-	cartFloatButton.addEventListener('click', function () {
-
-		const cartWithItemsCollection = cartWithItems.children;
-
-		if (!cartWithItemsCollection.length) {
-			cartPurchaseInfo.classList.add('closed');
-			cartWithoutItems.classList.remove('closed');
-		} else {
-			cartPurchaseInfo.classList.remove('closed');
-			cartWithoutItems.classList.add('closed');
-		}
-
-		cart.classList.remove('closed');
-		vitrine.classList.add('closed');
-
-	});
-
-	//Closing the cart
-	closeCartButton.addEventListener('click', function () {
-		cart.classList.add('closed');
-		vitrine.classList.remove('closed');
-	});
 }
 
 function setupMenuSelection() {

@@ -385,9 +385,7 @@ h1{
 
 /* */
 
-.closed{
-	display: none;
-}
+
 
 @media screen and (min-width: 655px) {
 
@@ -499,6 +497,7 @@ h1{
 		flex-direction: column;
 		background-color: #F5F5F5;
 		position: static;
+		height: fit-content;
 		max-height: 500px;
 		width: auto;
 		top: 0;
@@ -524,7 +523,9 @@ h1{
 	}
 
 	.cart-withoutItems{
-		margin-bottom: 0;
+		justify-content: center;
+		min-height: 350px;
+		margin: 0;
 	}
 
 	.cart-withItems{
@@ -552,4 +553,8 @@ h1{
 		margin: 0 3%;
 	}
 
+}
+
+.closed{
+	display: none;
 }
