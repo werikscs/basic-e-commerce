@@ -1,9 +1,9 @@
 setupMenuSelection();
-setupCartVisibilityAtResize();
+setupCartVisibility();
 setupFloatCartButton();
 
 
-function setupCartVisibilityAtResize() {
+function setupCartVisibility() {
 
 	const cart = document.getElementById('cart');
 	const vitrine = document.getElementById('vitrine');
@@ -66,10 +66,14 @@ function changeCartLayout() {
 	const cartWithoutItems = document.getElementById('cart-withoutItems');
 	const cartWithItems = document.getElementById('cart-withItems')
 	const cartPurchaseInfo = document.getElementById('cart-purchaseInfo');
-	if (isCartWithItems) {
+	if (isCartWithItems()) {
 		cartWithoutItems.classList.add('closed');
 		cartWithItems.classList.remove('closed');
 		cartPurchaseInfo.classList.remove('closed');
+	} else {
+		cartWithItems.classList.add('closed');
+		cartPurchaseInfo.classList.add('closed');
+		cartWithoutItems.classList.remove('closed');
 	}
 }
 
