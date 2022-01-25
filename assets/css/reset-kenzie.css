@@ -73,6 +73,6 @@ video {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   list-style-type: none;
 }
