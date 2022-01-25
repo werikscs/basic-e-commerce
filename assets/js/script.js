@@ -1,7 +1,7 @@
-function initFloatButton() {
+function setupFloatButton() {
 
 	const floatButton = document.getElementById('float-btn');
-	const closeCartButton = document.getElementById('cart-btnMobile-toggle');
+	const closeCartButton = document.getElementById('cart-btnMobile-closeCart');
 
 	const cart = document.getElementById('cart');
 	const vitrine = document.getElementById('vitrine');
@@ -14,7 +14,6 @@ function initFloatButton() {
 	floatButton.addEventListener('click', function () {
 
 		const cartWithItemsIsEmpty = cartWithItems.children;
-		console.log(cartWithItemsIsEmpty.length);
 
 		if (!cartWithItemsIsEmpty.length) {
 			cartPurchaseInfo.classList.add('closed');
@@ -24,16 +23,30 @@ function initFloatButton() {
 			cartWithoutItems.classList.add('closed');
 		}
 
-		cart.classList.add('opened');
+		cart.classList.remove('closed');
 		vitrine.classList.add('closed');
 
 	});
 
 	//Closing the cart
 	closeCartButton.addEventListener('click', function () {
-		cart.classList.remove('opened');
+		cart.classList.add('closed');
 		vitrine.classList.remove('closed');
 	});
 }
 
-init();
+function setupMenuSelection() {
+	//Muda fundo da categoria selecionada
+	const menuLinks = document.getElementsByClassName('menu-link');
+	let selectedLink = menuLinks[0];
+	for (const link of menuLinks) {
+		link.addEventListener('click', function () {
+			selectedLink.classList.remove('selected');
+			link.classList.add('selected');
+			selectedLink = link;
+		})
+	}
+}
+
+setupMenuSelection();
+setupFloatButton();

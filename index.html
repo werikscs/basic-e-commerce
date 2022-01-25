@@ -26,7 +26,7 @@
 
 		<!-- MENU DE NAVEGAÇÃO -->
 		<nav class="menu">
-			<ul class="menu-lista">
+			<ul  class="menu-lista">
 				<li class="menu-item item1">
 					<a href="#" title='Todos' target="" class="menu-link selected">Todos</a>
 				</li>
@@ -49,7 +49,7 @@
 		<!-- CAMPO DE PESQUISA -->
 		<div class="search">
 			<input type="text" class="search-input" placeholder="Digite aqui sua pesquisa">
-			<button class="search-button">Pesquisar</button>
+			<button class="search-buttonNotMobile">Pesquisar</button>
 			<button class="search-buttonMobile"><i class="fas fa-search"></i></button>
 		</div>
 
@@ -123,11 +123,11 @@
 		</div>
 
 		<!-- CART -->
-		<div id="cart" class="cart">
+		<div id="cart" class="cart closed">
 
 			<div class="cart-header">
 				<p>Carrinho</p>
-				<button id="cart-btnMobile-toggle" class="cart-btnMobile-toggle"><i class="fas fa-times"></i></button>
+				<button id="cart-btnMobile-closeCart" class="cart-btnMobile-closeCart"><i class="fas fa-times"></i></button>
 			</div>
 
 			<div class="cart-body">
@@ -139,19 +139,6 @@
 
 				<div id="cart-withItems" class="cart-withItems">
 
-					<!-- <div class="cart-item">
-
-						<div class="cart-imgContainer">
-							<img class="cart-img" src="assets/img/lightweight-jacket.png" alt="">
-						</div>
-	
-						<div class="cart-productInfo">
-							<p class="cart-productName">Lightweight Jacket</p>
-							<p class="cart-productPrice">R$ 100.00</p>
-							<button class="cart-removeFromCart">Remover produto</button>
-						</div>
-					</div>
-
 					<div class="cart-item">
 
 						<div class="cart-imgContainer">
@@ -215,24 +202,39 @@
 							<p class="cart-productPrice">R$ 100.00</p>
 							<button class="cart-removeFromCart">Remover produto</button>
 						</div>
-					</div> -->
+					</div>
+
+					<div class="cart-item">
+
+						<div class="cart-imgContainer">
+							<img class="cart-img" src="assets/img/lightweight-jacket.png" alt="">
+						</div>
+	
+						<div class="cart-productInfo">
+							<p class="cart-productName">Lightweight Jacket</p>
+							<p class="cart-productPrice">R$ 100.00</p>
+							<button class="cart-removeFromCart">Remover produto</button>
+						</div>
+					</div>
 
 				</div>
 
-				<div id="cart-purchaseInfo" class="cart-purchaseInfo">
-
-					<div class="cart-quantity">
-						<p>Quantidade</p>
-						<p class="cart-quantityValue">0</p>
-					</div>
-
-					<div class="cart-total">
-						<p>Total</p>
-						<p class="cart-totalValue">0</p>
-					</div>
-
-				</div>
 			</div>
+
+			<div id="cart-purchaseInfo" class="cart-purchaseInfo closed">
+
+				<div class="cart-quantity">
+					<p>Quantidade</p>
+					<p class="cart-quantityValue">0</p>
+				</div>
+
+				<div class="cart-total">
+					<p>Total</p>
+					<p class="cart-totalValue">0</p>
+				</div>
+
+			</div>
+
 		</div>
 
 	</main>
