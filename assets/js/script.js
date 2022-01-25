@@ -1,4 +1,7 @@
-function setupFloatButton() {
+setupMenuSelection();
+setupFloatCartButton();
+
+function setupFloatCartButton() {
 
 	const cartFloatButton = document.getElementById('cart-floatBtn');
 	const closeCartButton = document.getElementById('cart-btnMobile-closeCart');
@@ -49,6 +52,3 @@ function setupMenuSelection() {
 		});
 	}
 }
-
-setupMenuSelection();
-setupFloatButton();
