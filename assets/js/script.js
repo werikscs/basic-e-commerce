@@ -8,28 +8,28 @@ function setupCartVisibilityAtResize() {
 	const cart = document.getElementById('cart');
 	const vitrine = document.getElementById('vitrine');
 
-	const cartFloatButton = document.getElementById('cart-floatBtn');
-	const closeCartButton = document.getElementById('cart-btnMobile-closeCart');
-
-	const cartWithItems = document.getElementById('cart-withItems');
-	const cartWithoutItems = document.getElementById('cart-withoutItems');
-	const cartPurchaseInfo = document.getElementById('cart-purchaseInfo');
-
 	//se começar no modo desktop, aparece o carrinho vazio por padrão
-	if (innerWidth >= 1125) {
+	if (innerWidth >= 1024) {
 		cart.classList.remove('closed');
 	}
+
+	changeCartLayout();
 
 	//se modo desktop, aparece carrinho
 	//se modo mobile, carrinho não começa aberto
 	window.addEventListener('resize', function () {
-		if (innerWidth < 1125) {
+		if (innerWidth < 1024) {
 			cart.classList.add('closed');
+			changeCartLayout();
 		}
 
-		if (innerWidth >= 1125) {
+		if (innerWidth >= 1024) {
 			cart.classList.remove('closed');
+			changeCartLayout();
 		}
+
+		vitrine.classList.remove('closed');
+
 	});
 
 }
@@ -39,11 +39,38 @@ function setupFloatCartButton() {
 	const vitrine = document.getElementById('vitrine');
 
 	const cartFloatButton = document.getElementById('cart-floatBtn');
-	const closeCartButton = document.getElementById('cart-btnMobile-closeCart');
+	const cartCloseButton = document.getElementById('cart-btnMobile-closeCart');
 
 	cartFloatButton.addEventListener('click', function () {
 		cart.classList.remove('closed');
+		vitrine.classList.add('closed');
 	});
+
+	cartCloseButton.addEventListener('click', function () {
+		cart.classList.add('closed');
+		vitrine.classList.remove('closed');
+	});
+
+}
+
+function isCartWithItems() {
+	const cartWithItemsCollection = document.getElementById('cart-withItems');
+	if (cartWithItemsCollection.childElementCount === 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function changeCartLayout() {
+	const cartWithoutItems = document.getElementById('cart-withoutItems');
+	const cartWithItems = document.getElementById('cart-withItems')
+	const cartPurchaseInfo = document.getElementById('cart-purchaseInfo');
+	if (isCartWithItems) {
+		cartWithoutItems.classList.add('closed');
+		cartWithItems.classList.remove('closed');
+		cartPurchaseInfo.classList.remove('closed');
+	}
 }
 
 function setupMenuSelection() {
