@@ -584,8 +584,10 @@ h1{
 
 	.cart-purchaseInfo{
 		display: flex;
-		position: sticky;
-		bottom: 0;
+    position: absolute;
+    top: 654px;
+    width: 350px;
+    height: fit-content;
 	}
 
 	/* -------- CART-BUTTON -------- */

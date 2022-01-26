@@ -18,6 +18,9 @@ function setupCartVisibility() {
 	//se modo desktop, aparece carrinho
 	//se modo mobile, carrinho não começa aberto
 	window.addEventListener('resize', function () {
+
+		cart.classList.remove('opened');
+
 		if (innerWidth < 1024) {
 			cart.classList.add('closed');
 			updateCartLayout();
