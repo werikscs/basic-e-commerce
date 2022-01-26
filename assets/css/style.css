@@ -340,6 +340,11 @@ h1{
 	background-color: transparent;
 }
 
+.cart-removeFromCart:hover{
+	color: red;
+	text-decoration: underline;
+}
+
 /* -------- CART-PURCHASE-INFO -------- */
 
 .cart-purchaseInfo{
@@ -535,6 +540,7 @@ h1{
 
 	.cart-withItems{
 		margin-bottom: 0;
+		min-height: 350px;
 	}
 
 	.cart-item{

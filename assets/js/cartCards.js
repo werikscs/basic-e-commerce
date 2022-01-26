@@ -3,12 +3,14 @@ function addProductToCart(element) {
 	const divCartWithItems = document.getElementById('cart-withItems');
 	divCartWithItems.appendChild(divCardCart);
 	updateCartLayout();
+	updatePurchaseInfo(divCardCart, 'add');
 }
 
 function removeProductFromCart(element) {
 	const divCartWithItems = document.getElementById('cart-withItems');
 	divCartWithItems.removeChild(element);
 	updateCartLayout();
+	updatePurchaseInfo(element, 'remove');
 }
 
 function createCartElement(element) {
