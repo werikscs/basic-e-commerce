@@ -263,7 +263,6 @@ h1{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 128px;
 }
 
 .cart-emptyText{
@@ -557,11 +556,12 @@ h1{
 
 	.cart-body{
 		margin-top: 0;
+		height: 500px;
 	}
 
 	.cart-withoutItems{
 		justify-content: center;
-		min-height: 350px;
+		height: 100%;
 		margin: 0;
 	}
 
