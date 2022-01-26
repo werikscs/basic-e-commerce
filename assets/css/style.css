@@ -187,6 +187,7 @@ h1{
 }
 
 .card-addToCart{
+	font-family: 'Inter';
 	color: #828282;
 	font-size: 14px;
 	line-height: 16px;
@@ -472,6 +473,7 @@ h1{
 	}
 
 	.search-input{
+		font-family: 'Inter';
 		background: #F5F5F5;
 		border: 1px solid #F5F5F5;
 		box-sizing: border-box;
