@@ -1,4 +1,5 @@
 function addProductToCart(element) {
+	console.log(element);
 	const divCardCart = createCartElement(element);
 	const divCartWithItems = document.getElementById('cart-withItems');
 	divCartWithItems.appendChild(divCardCart);

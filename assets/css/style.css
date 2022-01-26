@@ -426,7 +426,7 @@ h1{
 	/* -------- MENU -------- */
 
 	.menu{
-		margin-right: 2%;
+		margin-right: 5%;
 	}
 
 	.menu-lista{
@@ -611,4 +611,15 @@ h1{
 
 .closed-header{
 	display: none;
+}
+
+@media screen and (min-width: 1300px) {
+	.cart-and-search{
+		margin-right: 5%;
+	}
+
+	.vitrine{
+		margin-left: 3%;
+	}
+
 }
