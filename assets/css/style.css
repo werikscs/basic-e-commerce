@@ -571,8 +571,7 @@ h1{
 	}
 
 	.cart-withItems{
-		margin-bottom: 0;
-		min-height: 350px;
+		margin-bottom: 24px;
 	}
 
 	.cart-item{
