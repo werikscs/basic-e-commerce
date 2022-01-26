@@ -88,6 +88,7 @@ function setupMenuSelection() {
 			selectedLink.classList.remove('selected');
 			link.classList.add('selected');
 			selectedLink = link;
+			hideNonSelectedItems(selectedLink);
 		});
 	}
 }

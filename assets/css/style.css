@@ -577,3 +577,7 @@ h1{
 .closed{
 	display: none;
 }
+
+.closed-header{
+	display: none;
+}

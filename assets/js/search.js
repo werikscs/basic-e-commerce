@@ -15,14 +15,12 @@ searchBtn[1].addEventListener('click', function () {
 function hideNonSearchedItems(textToSearch) {
 	const re = new RegExp(textToSearch, 'i');
 
-	for (const element of vitrine.children) {
-
-		const elementText = element.querySelector('.card-productName').innerText;
-
-		if (!re.test(elementText)) {
-			element.classList.add('closed');
+	for (const vitrineCard of vitrine.children) {
+		const productName = vitrineCard.querySelector('.card-productName').innerText;
+		if (!re.test(productName)) {
+			vitrineCard.classList.add('closed');
 		} else {
-			element.classList.remove('closed');
+			vitrineCard.classList.remove('closed');
 		}
 	}
 }
