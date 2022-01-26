@@ -2,6 +2,7 @@ function addProductToCart(element) {
 	const divCardCart = createCartElement(element);
 	const divCartWithItems = document.getElementById('cart-withItems');
 	divCartWithItems.appendChild(divCardCart);
+	updateCartLayout();
 }
 
 function createCartElement(element) {

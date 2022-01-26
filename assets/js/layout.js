@@ -13,19 +13,19 @@ function setupCartVisibility() {
 		cart.classList.remove('closed');
 	}
 
-	changeCartLayout();
+	updateCartLayout();
 
 	//se modo desktop, aparece carrinho
 	//se modo mobile, carrinho não começa aberto
 	window.addEventListener('resize', function () {
 		if (innerWidth < 1024) {
 			cart.classList.add('closed');
-			changeCartLayout();
+			updateCartLayout();
 		}
 
 		if (innerWidth >= 1024) {
 			cart.classList.remove('closed');
-			changeCartLayout();
+			updateCartLayout();
 		}
 
 		vitrine.classList.remove('closed');
@@ -62,7 +62,7 @@ function isCartWithItems() {
 	}
 }
 
-function changeCartLayout() {
+function updateCartLayout() {
 	const cartWithoutItems = document.getElementById('cart-withoutItems');
 	const cartWithItems = document.getElementById('cart-withItems')
 	const cartPurchaseInfo = document.getElementById('cart-purchaseInfo');
