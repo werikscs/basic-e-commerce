@@ -5,9 +5,13 @@ function addProductToCart(element) {
 	updateCartLayout();
 }
 
-function createCartElement(element) {
-	console.log(element)
+function removeProductFromCart(element) {
+	const divCartWithItems = document.getElementById('cart-withItems');
+	divCartWithItems.removeChild(element);
+	updateCartLayout();
+}
 
+function createCartElement(element) {
 	const productImg = element.querySelector('.card-img').getAttribute('src');
 	const productName = element.querySelector('.card-productName').innerText;
 	const productPrice = element.querySelector('.card-productPrice').innerText;
@@ -38,7 +42,11 @@ function createCartElement(element) {
 
 	pCartProductName.innerText = productName;
 	pCartProductPrice.innerText = productPrice;
+
 	btnRemoveFromCart.innerText = "Remover produto";
+	btnRemoveFromCart.addEventListener('click', function () {
+		removeProductFromCart(divCartItem);
+	});
 
 	divCartProductInfo.appendChild(pCartProductName);
 	divCartProductInfo.appendChild(pCartProductPrice);
